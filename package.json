@@ -9,9 +9,10 @@
     "lint": "eslint --ext .ts,tsx,.spec.ts,.spec.tsx"
   },
   "dependencies": {
+    "daisyui": "latest",
+    "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
