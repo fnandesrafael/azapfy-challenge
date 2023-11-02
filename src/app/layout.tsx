@@ -1,8 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Archivo_Black, Poppins } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const archivoBlack = Archivo_Black({
+  weight: '400',
+  variable: '--font-archivo-black',
+  preload: true,
+  subsets: ['latin'],
+  display: 'swap',
+});
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+  preload: true,
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Jornada do Herói',
@@ -17,7 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="retro">
-      <body className={inter.className}>{children}</body>
+      <body className={`${poppins.variable} ${archivoBlack.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
