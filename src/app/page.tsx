@@ -14,7 +14,7 @@ export default function Home() {
 
       <Hero />
 
-      <section className="container mb-8 mt-48 px-[4vw] md:mt-24">
+      <section className="container mb-8 mt-48 px-[4vw] md:mt-52">
         <div className="flex flex-col">
           <h1 className="mb-2 font-head text-3xl uppercase md:text-5xl">
             Heróis
@@ -25,7 +25,7 @@ export default function Home() {
           <Image
             src={gridElement}
             alt=""
-            className="absolute left-0 top-[40rem] w-8"
+            className="absolute bottom-24 left-0 w-8"
           />
 
           <SearchBar />
