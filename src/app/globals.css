@@ -34,10 +34,14 @@ body {
   display: none;
 }
 
+.input-group {
+  @apply flex flex-row h-auto
+}
+
 .input-group > :first-child {
   @apply rounded-full
 }
 
 .input-group > :last-child {
-  @apply rounded-full p-3
+  @apply rounded-full p-2
 }
