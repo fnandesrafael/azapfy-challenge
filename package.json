@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .ts,tsx,.spec.ts,.spec.tsx",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "daisyui": "latest",
@@ -17,9 +18,6 @@
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
-    "@babel/preset-react": "^7.22.15",
     "@babel/preset-typescript": "^7.23.2",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
@@ -31,7 +29,6 @@
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
     "autoprefixer": "^10.0.1",
-    "babel-jest": "^29.7.0",
     "eslint": "^8.52.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -50,6 +47,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.0",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   }
 }

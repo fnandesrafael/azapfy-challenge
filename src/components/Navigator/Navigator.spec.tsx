@@ -10,7 +10,7 @@ describe('<Navigator.Root/> fragment', () => {
       </Navigator.Root>,
     );
 
-    const sut = getByText(/'mussum ipsum'/i);
+    const sut = getByText(/mussum ipsum/i);
 
     expect(sut).toBeInTheDocument();
   });
