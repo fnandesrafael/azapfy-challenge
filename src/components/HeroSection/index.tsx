@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import minihero from '../../../public/images/minihero.png';
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section
       className="container mt-2 flex flex-row justify-between px-[4vw] md:mt-16"
