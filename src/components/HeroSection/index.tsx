@@ -40,7 +40,7 @@ export default function HeroSection() {
         <Image
           src={minihero}
           alt="Imagem de um menino em modelagem 3D correndo com uma capa de super herói."
-          className="absolute -right-12 top-60 w-[300px] md:top-44 md:w-[450px] lg:right-0 lg:top-24 lg:w-[600px]"
+          className="absolute -right-12 top-60 w-[300px] transition-transform duration-1000 ease-in-out md:top-44 md:w-[450px] lg:right-0 lg:top-24 lg:w-[600px]"
         />
       </div>
     </section>

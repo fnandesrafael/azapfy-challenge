@@ -17,10 +17,8 @@ export default function Display() {
   );
 
   return (
-    <>
-      <div className="grid gap-x-4 gap-y-10 py-12 lg:grid-cols-5">
-        {heroes?.map((hero) => <HeroCard data={hero} />)}
-      </div>
-    </>
+    <div className="flex flex-col justify-center gap-8 py-12 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      {heroes?.map((hero) => <HeroCard data={hero} />)}
+    </div>
   );
 }
