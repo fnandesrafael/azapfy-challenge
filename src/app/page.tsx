@@ -12,9 +12,9 @@ export default function Home() {
 
       <Hero />
 
-      <section className="container mt-48 px-[5vw] md:mt-24">
+      <section className="container mb-8 mt-48 px-[5vw] md:mt-24">
         <div className="flex flex-col">
-          <h1 className="mb-2 font-head text-2xl uppercase md:text-5xl">
+          <h1 className="mb-2 font-head text-3xl uppercase md:text-5xl">
             Heróis
           </h1>
           <p className="mb-8 text-sm opacity-75 md:text-base">
