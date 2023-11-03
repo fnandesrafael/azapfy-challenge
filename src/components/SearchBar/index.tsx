@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function SearchBar() {
   return (
-    <div className="input-group w-full gap-4" role="search">
+    <form className="input-group w-full gap-4" role="searchbox">
       <input
         type="text"
         placeholder="Batman, Superman etc..."
-        className="focus:shadow-comic input input-bordered w-full text-sm transition-shadow duration-200 ease-in-out placeholder:text-sm placeholder:text-[#16160a20] focus:outline-none md:w-1/2 md:text-base md:placeholder:text-base"
-        role="searchbox"
+        className="focus:shadow-comic input input-bordered w-full text-sm transition-shadow duration-200 ease-in-out placeholder:text-sm placeholder:text-[#16160a20] focus:outline-none md:w-1/2 md:text-sm md:placeholder:text-sm"
+        role="search-input"
       />
       <button className="shadow-comic hover:shadow-comic btn btn-primary rounded-full md:shadow-none">
         <svg
@@ -25,6 +25,6 @@ export default function SearchBar() {
           />
         </svg>
       </button>
-    </div>
+    </form>
   );
 }
