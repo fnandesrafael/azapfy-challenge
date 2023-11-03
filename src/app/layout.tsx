@@ -30,7 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="retro">
-      <body className={`${poppins.variable} ${archivoBlack.variable}`}>
+      <body
+        className={`${poppins.variable} ${archivoBlack.variable} text-[#16160A]`}
+      >
         {children}
       </body>
     </html>
