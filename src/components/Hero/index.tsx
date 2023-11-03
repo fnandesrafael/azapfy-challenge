@@ -20,11 +20,11 @@ export default function Hero() {
           melhor!
         </p>
 
-        <div className="z-10 flex flex-row items-start gap-4">
-          <button className="hover:shadow-comic shadow-comic btn btn-primary rounded-full px-8 md:shadow-none">
+        <div className="z-10 flex flex-col items-start gap-4 md:flex-row">
+          <button className="hover:shadow-comic shadow-comic btn btn-primary w-32 rounded-full px-8 md:shadow-none">
             Jogar!
           </button>
-          <button className="hover:shadow-comic shadow-comic btn btn-secondary rounded-full px-8 md:shadow-none">
+          <button className="hover:shadow-comic shadow-comic btn btn-secondary w-32 rounded-full px-8 md:shadow-none">
             Sobre
           </button>
         </div>
