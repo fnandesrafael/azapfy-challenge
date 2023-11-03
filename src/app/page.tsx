@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import Navigator from '@/components/Navigator';
 import SearchBar from '@/components/SearchBar';
+import gridElement from '../../public/images/grid_element.png';
 
 export default function Home() {
   return (
@@ -12,7 +14,7 @@ export default function Home() {
 
       <Hero />
 
-      <section className="container mb-8 mt-48 px-[5vw] md:mt-24">
+      <section className="container mb-8 mt-48 px-[4vw] md:mt-52">
         <div className="flex flex-col">
           <h1 className="mb-2 font-head text-3xl uppercase md:text-5xl">
             Heróis
@@ -20,6 +22,11 @@ export default function Home() {
           <p className="mb-8 text-sm opacity-75 md:text-base">
             Pesquise seu herói favorito digitando no campo abaixo.
           </p>
+          <Image
+            src={gridElement}
+            alt=""
+            className="absolute bottom-24 left-0 w-8"
+          />
 
           <SearchBar />
         </div>

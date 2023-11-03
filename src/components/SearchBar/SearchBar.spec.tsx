@@ -6,7 +6,7 @@ describe('<SearchBar /> component', () => {
   it('should be in the document', () => {
     const { getByRole } = render(<SearchBar />);
 
-    const sut = getByRole('search');
+    const sut = getByRole('searchbox');
 
     expect(sut).toBeInTheDocument();
   });
