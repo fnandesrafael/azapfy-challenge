@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import Navigator from '@/components/Navigator';
 import SearchBar from '@/components/SearchBar';
 import gridElement from '../../public/images/grid_element.png';
+import Display from '@/components/Display';
 
 export default function Home() {
   return (
@@ -31,12 +32,7 @@ export default function Home() {
           <SearchBar />
         </div>
 
-        <div className="py-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aliquam
-          nesciunt numquam amet nemo earum natus tenetur fuga cupiditate
-          assumenda ratione, aliquid corrupti, esse totam perferendis ipsum
-          culpa? Consectetur, repudiandae.
-        </div>
+        <Display />
       </section>
     </main>
   );
