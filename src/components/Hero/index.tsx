@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import heroImage from '../../../public/images/heroimage.png';
+import minihero from '../../../public/images/minihero.png';
 
 export default function Hero() {
   return (
@@ -37,7 +37,7 @@ export default function Hero() {
 
       <div>
         <Image
-          src={heroImage}
+          src={minihero}
           alt="Imagem de um menino em modelagem 3D correndo com uma capa de super herói."
           className="absolute -right-12 top-60 w-[300px] md:right-0 md:top-24 md:w-[600px]"
         />

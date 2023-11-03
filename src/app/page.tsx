@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import Navigator from '@/components/Navigator';
 import SearchBar from '@/components/SearchBar';
+import gridElement from '../../public/images/grid_element.png';
 
 export default function Home() {
   return (
@@ -20,6 +22,11 @@ export default function Home() {
           <p className="mb-8 text-sm opacity-75 md:text-base">
             Pesquise seu herói favorito digitando no campo abaixo.
           </p>
+          <Image
+            src={gridElement}
+            alt=""
+            className="absolute left-0 top-[40rem] w-8"
+          />
 
           <SearchBar />
         </div>
