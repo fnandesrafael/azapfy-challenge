@@ -4,7 +4,7 @@ import { LuMenu } from 'react-icons/lu';
 
 export default function Dropdown() {
   return (
-    <div className="dropdown dropdown-end flex md:hidden">
+    <div className="dropdown dropdown-end flex md:hidden" role="dropdown">
       <label tabIndex={0} className="btn h-12 w-12 rounded-full p-2">
         <LuMenu className="text-2xl" />
       </label>

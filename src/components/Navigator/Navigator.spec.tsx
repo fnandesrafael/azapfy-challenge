@@ -15,7 +15,7 @@ describe('<Navigator/> component', () => {
     expect(sut).toBeInTheDocument();
   });
 
-  it('<Navigator.Navbar /> should be displayed when screen is md', () => {
+  it('<Navigator.Navbar /> should be in the document', () => {
     const { getByRole } = render(
       <Navigator.Root>
         <Navigator.Navbar />
@@ -23,6 +23,18 @@ describe('<Navigator/> component', () => {
     );
 
     const sut = getByRole('navigation');
+
+    expect(sut).toBeInTheDocument();
+  });
+
+  it('<Navigator.Dropdown /> should be in the document', () => {
+    const { getByRole } = render(
+      <Navigator.Root>
+        <Navigator.Dropdown />
+      </Navigator.Root>,
+    );
+
+    const sut = getByRole('dropdown');
 
     expect(sut).toBeInTheDocument();
   });
