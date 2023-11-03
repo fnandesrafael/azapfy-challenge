@@ -2,11 +2,12 @@ import React from 'react';
 
 export default function SearchBar() {
   return (
-    <div className="input-group">
+    <div className="input-group" role="search">
       <input
         type="text"
         placeholder="Batman, Superman etc..."
         className="input input-bordered placeholder:text-[#16160a20] focus:outline-none"
+        role="searchbox"
       />
       <button className="btn btn-square btn-primary">
         <svg
