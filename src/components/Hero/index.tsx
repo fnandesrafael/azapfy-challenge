@@ -6,10 +6,10 @@ import heroImage from '../../../public/images/heroimage.png';
 export default function Hero() {
   return (
     <section
-      className="container mt-2 flex flex-row justify-between px-[5vw] md:mt-16"
+      className="container mt-2 flex flex-row justify-between px-[4vw] md:mt-16"
       role="hero"
     >
-      <div className="flex max-w-xl flex-col">
+      <div className="z-10 flex max-w-xl flex-col">
         <h1 className="mb-4 font-head text-4xl uppercase md:mb-8 md:text-8xl">
           Jornada do Herói
         </h1>
