@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import heroImage from '../../../public/images/heroimage.png';
 
 export default function Hero() {
@@ -24,9 +25,13 @@ export default function Hero() {
           <button className="hover:shadow-comic shadow-comic btn btn-primary w-32 rounded-full px-8 md:shadow-none">
             Jogar!
           </button>
-          <button className="hover:shadow-comic shadow-comic btn btn-secondary w-32 rounded-full px-8 md:shadow-none">
+          <Link
+            className="hover:shadow-comic shadow-comic btn btn-secondary w-32 rounded-full px-8 md:shadow-none"
+            href="http://homologacao3.azapfy.com.br/api/ps/metahumans"
+            target="_blank"
+          >
             Sobre
-          </button>
+          </Link>
         </div>
       </div>
 

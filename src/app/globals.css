@@ -33,3 +33,11 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.input-group > :first-child {
+  @apply rounded-full
+}
+
+.input-group > :last-child {
+  @apply rounded-full p-3
+}
