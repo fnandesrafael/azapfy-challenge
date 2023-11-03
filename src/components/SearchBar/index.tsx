@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function SearchBar() {
   return (
-    <div className="input-group" role="search">
+    <div className="input-group w-full" role="search">
       <input
         type="text"
         placeholder="Batman, Superman etc..."
-        className="input input-bordered placeholder:text-[#16160a20] focus:outline-none"
+        className="input input-bordered w-full placeholder:text-[#16160a20] focus:outline-none md:w-1/2"
         role="searchbox"
       />
       <button className="btn btn-square btn-primary">
