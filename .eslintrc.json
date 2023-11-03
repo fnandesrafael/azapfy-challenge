@@ -8,7 +8,9 @@
     "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -28,6 +30,7 @@
       "jpeg": "always",
       "svg": "always"
     }],
-    "no-promise-executor-return": "off"
+    "no-promise-executor-return": "off",
+    "tailwindcss/no-custom-classname": "off"
   }
 }

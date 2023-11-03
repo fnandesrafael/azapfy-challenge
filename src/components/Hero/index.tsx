@@ -22,11 +22,11 @@ export default function Hero() {
         </p>
 
         <div className="z-10 flex flex-col items-start gap-4 md:flex-row">
-          <button className="hover:shadow-comic shadow-comic btn btn-primary w-32 rounded-full px-8 md:shadow-none">
+          <button className="btn btn-primary w-32 rounded-full px-8 shadow-comic hover:shadow-comic md:shadow-none">
             Jogar!
           </button>
           <Link
-            className="hover:shadow-comic shadow-comic btn btn-secondary w-32 rounded-full px-8 md:shadow-none"
+            className="btn btn-secondary w-32 rounded-full px-8 shadow-comic hover:shadow-comic md:shadow-none"
             href="http://homologacao3.azapfy.com.br/api/ps/metahumans"
             target="_blank"
           >

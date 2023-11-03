@@ -6,10 +6,10 @@ export default function SearchBar() {
       <input
         type="text"
         placeholder="Batman, Superman etc..."
-        className="focus:shadow-comic input input-bordered w-full text-sm transition-shadow duration-200 ease-in-out placeholder:text-sm placeholder:text-[#16160a20] focus:outline-none md:w-1/2 md:text-sm md:placeholder:text-sm"
+        className="input input-bordered w-full text-sm transition-shadow duration-200 ease-in-out placeholder:text-sm placeholder:text-[#16160a20] focus:shadow-comic focus:outline-none md:w-1/2 md:text-sm md:placeholder:text-sm"
         role="search-input"
       />
-      <button className="shadow-comic hover:shadow-comic btn btn-primary rounded-full md:shadow-none">
+      <button className="btn btn-primary rounded-full shadow-comic hover:shadow-comic md:shadow-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"

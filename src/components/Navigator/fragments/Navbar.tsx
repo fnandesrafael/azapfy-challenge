@@ -8,20 +8,20 @@ export default function Navbar() {
       role="navigation"
     >
       <Link
-        className="hover:shadow-comic btn btn-ghost btn-md rounded-full px-8 normal-case"
+        className="btn btn-ghost btn-md rounded-full px-8 normal-case hover:shadow-comic"
         href="/"
       >
         Jogar
       </Link>
       <Link
-        className="hover:shadow-comic btn btn-ghost btn-md rounded-full px-8 normal-case"
+        className="btn btn-ghost btn-md rounded-full px-8 normal-case hover:shadow-comic"
         href="http://homologacao3.azapfy.com.br/api/ps/metahumans"
         target="_blank"
       >
         API
       </Link>
       <Link
-        className="hover:shadow-comic btn btn-ghost btn-md rounded-full px-8 normal-case"
+        className="btn btn-ghost btn-md rounded-full px-8 normal-case hover:shadow-comic"
         href="https://github.com/fnandesrafael/azapfy-challenge"
         target="_blank"
       >

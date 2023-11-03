@@ -10,7 +10,7 @@ export default function Dropdown() {
       </label>
       <ul
         tabIndex={0}
-        className="shadow-comic menu dropdown-content z-[1] gap-2 bg-base-200 font-medium text-neutral"
+        className="menu dropdown-content z-[1] gap-2 bg-base-200 font-medium text-neutral shadow-comic "
       >
         <li className="flex w-full items-center justify-center">
           <Link className="rounded-full" href="/">
