@@ -30,7 +30,7 @@ export default function Home() {
           <Image
             src={heroImage}
             alt="Imagem de um menino em modelagem 3D correndo com uma capa de super herói."
-            className="absolute right-0 top-24 w-[575px]"
+            className="absolute right-0 top-20 w-[600px]"
           />
         </div>
       </section>
