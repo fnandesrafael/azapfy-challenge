@@ -17,6 +17,9 @@ const config: Config = {
         head: ['var(--font-archivo-black)'],
         sans: ['var(--font-poppins)'],
       },
+      boxShadow: {
+        comic: '6px 6px 0px 0px #16160A',
+      },
     },
   },
   // eslint-disable-next-line global-require
