@@ -12,10 +12,12 @@ export default function Home() {
 
       <Hero />
 
-      <section className="container mt-24 px-[5vw]">
+      <section className="container mt-48 px-[5vw] md:mt-24">
         <div className="flex flex-col">
-          <h1 className="mb-2 font-head text-5xl uppercase">Heróis</h1>
-          <p className="mb-8 opacity-75">
+          <h1 className="mb-2 font-head text-2xl uppercase md:text-5xl">
+            Heróis
+          </h1>
+          <p className="mb-8 text-sm opacity-75 md:text-base">
             Pesquise seu herói favorito digitando no campo abaixo.
           </p>
 
