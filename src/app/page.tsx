@@ -10,7 +10,7 @@ export default function Home() {
         <Navigator.Dropdown />
       </Navigator.Root>
 
-      <section className="container mt-14 flex flex-row justify-between px-4">
+      <section className="container mt-14 flex flex-row justify-between px-[5vw]">
         <div className="flex max-w-xl flex-col">
           <h1 className="mb-8 font-head text-8xl uppercase">
             Jornada do Herói
@@ -30,7 +30,7 @@ export default function Home() {
           <Image
             src={heroImage}
             alt="Imagem de um menino em modelagem 3D correndo com uma capa de super herói."
-            className="absolute right-0 top-24 w-[500px]"
+            className="absolute right-0 top-24 w-[575px]"
           />
         </div>
       </section>
