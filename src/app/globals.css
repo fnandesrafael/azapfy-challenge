@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.btn {
+  @apply rounded-full px-8
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

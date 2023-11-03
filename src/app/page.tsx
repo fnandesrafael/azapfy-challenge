@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex flex-col">
           <h1 className="mb-2 font-head text-5xl uppercase">Heróis</h1>
           <p className="mb-8 opacity-75">
-            Pesquise seu herói favorito digitando no campo abaixo
+            Pesquise seu herói favorito digitando no campo abaixo.
           </p>
 
           <SearchBar />
