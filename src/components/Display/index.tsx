@@ -4,11 +4,12 @@ import axios from 'axios';
 import React from 'react';
 import useSWR from 'swr';
 import useHeroesStore from '@/store/heroesStore';
+import HeroCard from '../HeroCard';
 
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export default function Display() {
-  const { setHeroes } = useHeroesStore();
+  const { setHeroes, heroes } = useHeroesStore();
   const { data } = useSWR(
     'http://homologacao3.azapfy.com.br/api/ps/metahumans',
     fetcher,
@@ -17,11 +18,8 @@ export default function Display() {
 
   return (
     <>
-      <div className="py-12">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-        tempore molestiae optio mollitia sequi, fugiat deleniti non provident,
-        voluptatem corrupti ut. Modi excepturi, quam quia commodi saepe ullam
-        incidunt quos?
+      <div className="grid gap-x-4 gap-y-10 py-12 lg:grid-cols-5">
+        {heroes?.map((hero) => <HeroCard data={hero} />)}
       </div>
     </>
   );
