@@ -16,8 +16,10 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-row items-start gap-4">
-          <button className="hover:shadow-comic btn btn-primary">Jogar!</button>
-          <button className="hover:shadow-comic btn btn-secondary">
+          <button className="hover:shadow-comic btn btn-primary rounded-full px-8">
+            Jogar!
+          </button>
+          <button className="hover:shadow-comic btn btn-secondary rounded-full px-8">
             Sobre
           </button>
         </div>
