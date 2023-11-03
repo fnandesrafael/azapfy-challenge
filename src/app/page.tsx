@@ -8,10 +8,8 @@ import Display from '@/components/Display';
 export default function Home() {
   return (
     <>
-      <Navigator.Root>
-        <Navigator.Navbar />
-        <Navigator.Dropdown />
-      </Navigator.Root>
+      <Navigator />
+
       <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden bg-base-100 px-[4vw] font-sans font-medium">
         <HeroSection />
 
