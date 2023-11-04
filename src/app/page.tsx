@@ -11,7 +11,9 @@ export default function Home() {
       <Navigator />
 
       <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden bg-base-100 px-[4vw] font-sans font-medium">
-        <HeroSection />
+        <div className="w-full rounded-xl bg-base-200 p-2 py-6 md:p-8">
+          <HeroSection />
+        </div>
 
         <section className="container mb-8 mt-48 md:mt-52">
           <div className="flex flex-col">
