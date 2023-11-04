@@ -31,7 +31,7 @@ export default function HeroSection() {
           </Link>
           <Link
             className="btn btn-secondary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none"
-            href="http://homologacao3.azapfy.com.br/api/ps/metahumans"
+            href="https://github.com/fnandesrafael/azapfy-challenge"
             target="_blank"
             role="button"
           >
