@@ -1,21 +1,30 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { FormEvent, useRef } from 'react';
 import { BiLoader, BiSearch } from 'react-icons/bi';
 import useHeroesStore from '@/store/heroesStore';
 
-export default function SearchBar() {
+type SearchBarProps = {
+  isSearching: boolean;
+  setIsSearching: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export default function SearchBar({
+  isSearching,
+  setIsSearching,
+}: SearchBarProps) {
   const { heroes, filterHeroes } = useHeroesStore();
-  const [isLoading, setIsLoading] = useState(false);
   const inputValue = useRef<HTMLInputElement>(null);
   const debounce = useRef<NodeJS.Timeout | null>(null);
 
-  const handleSearch = () => {
+  const handleSearch = (e: FormEvent) => {
+    e.preventDefault();
+
     if (debounce.current) {
       clearTimeout(debounce.current);
     }
 
-    setIsLoading(true);
+    setIsSearching(true);
 
     debounce.current = setTimeout(() => {
       filterHeroes(
@@ -27,7 +36,7 @@ export default function SearchBar() {
             ),
         ),
       );
-      setIsLoading(false);
+      setIsSearching(false);
     }, 1000);
   };
 
@@ -45,7 +54,7 @@ export default function SearchBar() {
         className="btn btn-primary h-12 w-12 rounded-full shadow-comic md:shadow-none md:hover:shadow-comic"
         onClick={handleSearch}
       >
-        {isLoading ? (
+        {isSearching ? (
           <BiLoader className="text-2xl" />
         ) : (
           <BiSearch className="text-2xl" />

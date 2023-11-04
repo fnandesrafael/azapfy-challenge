@@ -22,9 +22,13 @@ export default function HeroSection() {
         </p>
 
         <div className="z-10 flex flex-col items-start gap-4 md:flex-row">
-          <button className="btn btn-primary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none">
+          <Link
+            className="btn btn-primary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none"
+            href="#play"
+            role="button"
+          >
             Jogar!
-          </button>
+          </Link>
           <Link
             className="btn btn-secondary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none"
             href="http://homologacao3.azapfy.com.br/api/ps/metahumans"
