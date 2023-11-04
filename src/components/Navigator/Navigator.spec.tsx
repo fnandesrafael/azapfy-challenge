@@ -4,23 +4,15 @@ import Navigator from '.';
 
 describe('<Navigator/> component', () => {
   it('<Navigator.Root /> should be in the document', () => {
-    const { getByText } = render(
-      <Navigator.Root>
-        <p>mussum ipsum</p>
-      </Navigator.Root>,
-    );
+    const { getByRole } = render(<Navigator />);
 
-    const sut = getByText(/mussum ipsum/i);
+    const sut = getByRole('header');
 
     expect(sut).toBeInTheDocument();
   });
 
   it('<Navigator.Navbar /> should be in the document', () => {
-    const { getByRole } = render(
-      <Navigator.Root>
-        <Navigator.Navbar />
-      </Navigator.Root>,
-    );
+    const { getByRole } = render(<Navigator />);
 
     const sut = getByRole('navigation');
 
@@ -28,11 +20,7 @@ describe('<Navigator/> component', () => {
   });
 
   it('<Navigator.Dropdown /> should be in the document', () => {
-    const { getByRole } = render(
-      <Navigator.Root>
-        <Navigator.Dropdown />
-      </Navigator.Root>,
-    );
+    const { getByRole } = render(<Navigator />);
 
     const sut = getByRole('dropdown');
 
