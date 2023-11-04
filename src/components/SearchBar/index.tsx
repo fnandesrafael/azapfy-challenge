@@ -19,7 +19,7 @@ export default function SearchBar() {
 
     debounce.current = setTimeout(() => {
       filterHeroes(
-        heroes.filter((hero) =>
+        heroes?.filter((hero) =>
           hero.name
             .toLowerCase()
             .includes(
