@@ -1,7 +1,8 @@
 'use client';
 
 import React, { FormEvent, useRef } from 'react';
-import { BiLoader, BiSearch } from 'react-icons/bi';
+import { BiSearch } from 'react-icons/bi';
+import Spinner from '@/components/Spinner';
 import useHeroesStore from '@/store/heroesStore';
 
 type SearchBarProps = {
@@ -55,7 +56,7 @@ export default function SearchBar({
         onClick={handleSearch}
       >
         {isSearching ? (
-          <BiLoader className="text-2xl" />
+          <Spinner fontSize="text-2xl" textColor="text-black" />
         ) : (
           <BiSearch className="text-2xl" />
         )}

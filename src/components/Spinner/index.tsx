@@ -9,7 +9,7 @@ type SpinnerProps = {
 
 export default function Spinner({ fontSize, textColor }: SpinnerProps) {
   return (
-    <motion.span className="flex flex-col items-center justify-center">
+    <motion.span className="flex flex-col items-center justify-center bg-transparent">
       <AiOutlineLoading
         className={`mx-4 animate-spin duration-500 ${fontSize} ${textColor}`}
       />
