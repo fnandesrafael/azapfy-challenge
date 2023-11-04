@@ -3,7 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import Navigator from '@/components/Navigator';
 import SearchBar from '@/components/SearchBar';
 import gridElement from '../../public/images/grid_element.png';
-import Display from '@/components/Display';
+import CardDisplay from '@/components/CardDisplay';
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
             <SearchBar />
           </div>
 
-          <Display />
+          <CardDisplay />
         </section>
       </main>
     </>
