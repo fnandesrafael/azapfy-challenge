@@ -10,11 +10,9 @@ type HeroCardProps = {
 export default function HeroCard({ data }: HeroCardProps) {
   return (
     <motion.div
-      className="text-contrast group relative flex h-80 w-64 flex-col items-center justify-center overflow-hidden border-[2px] border-[#16160a] transition-all duration-200 ease-in-out hover:cursor-pointer hover:border-[2px] hover:shadow-comic md:h-64 md:w-52"
+      className="text-contrast group relative flex h-80 w-64 flex-col items-center justify-center overflow-hidden border-[2px] border-[#16160a] transition-colors duration-200 ease-in-out hover:cursor-pointer hover:border-[2px] hover:shadow-comic md:h-64 md:w-52"
       role="card"
-      initial={{ rotateZ: '-15deg', rotateX: '-15deg' }}
-      animate={{ rotateZ: 0, rotateX: 0 }}
-      whileHover={{ y: '-1rem' }}
+      whileHover={{ y: '-1rem', rotateZ: '5deg' }}
     >
       <Image
         className="w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
