@@ -23,11 +23,8 @@ export default function CardDisplay({ isSearching }: CardDisplayProps) {
 
   return (
     <div className="flex flex-col items-center gap-x-8 gap-y-12 py-12 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-      {heroes.length === 0 ||
-        (isSearching &&
-          Array.from({ length: 12 }).map((_, index) => (
-            <Skeleton key={index} />
-          )))}
+      {(heroes.length === 0 || isSearching) &&
+        Array.from({ length: 12 }).map((_, index) => <Skeleton key={index} />)}
 
       {filteredHeroes.length > 0
         ? filteredHeroes.map((hero) => <HeroCard key={hero.id} data={hero} />)
