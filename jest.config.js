@@ -8,7 +8,8 @@ const createJestConfig = nextJest({
 const config = {
   testEnvironment: 'jest-environment-jsdom',
   preset: 'ts-jest',
-  collectCoverageFrom: ['src/**/*.tsx']
+  collectCoverageFrom: ['src/**/*.tsx'],
+  coveragePathIgnorePatterns: ['Skeleton.tsx']
 }
 
 module.exports =  createJestConfig(config)
