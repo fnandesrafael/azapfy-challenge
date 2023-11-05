@@ -13,9 +13,11 @@ export default function PreviewCard({ data }: PreviewCardProps) {
 
   return (
     <motion.div
+      key={data.id}
       className="group flex w-[4.5rem] flex-col items-center justify-center rounded-sm border-[2px] border-[#16160a] bg-base-100 shadow-comic"
       initial={{ scale: 0 }}
       animate={{ scale: 1, transition: { delay: 0.2 } }}
+      exit={{ scale: 0 }}
       whileHover={{ y: '-1rem' }}
     >
       <button

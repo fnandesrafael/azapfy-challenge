@@ -13,7 +13,7 @@ export default function HeroCard({ data }: HeroCardProps) {
 
   return (
     <div
-      className="text-contrast group relative flex h-80 w-64 flex-col items-center justify-center overflow-hidden border-[2px] border-[#16160a] transition-all duration-200 ease-in-out hover:-translate-y-4 hover:cursor-pointer hover:border-[#16160a] hover:shadow-comic md:h-64 md:w-52"
+      className="text-contrast group relative flex h-80 w-64 flex-col items-center justify-center overflow-hidden rounded-sm border-[2px] border-[#16160a] transition-all duration-200 ease-in-out hover:-translate-y-4 hover:cursor-pointer hover:border-[#16160a] hover:shadow-comic md:h-64 md:w-52"
       role="card"
       onClick={() => addHero(data)}
     >
