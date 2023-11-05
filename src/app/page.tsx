@@ -7,7 +7,7 @@ import Navigator from '@/components/Navigator';
 import SearchBar from '@/components/SearchBar';
 import gridElement from '../../public/images/grid_element.png';
 import CardDisplay from '@/components/CardDisplay';
-import BattleCard from '@/components/BattleCard';
+import BattleSpan from '@/components/BattleSpan';
 
 export default function Home() {
   const [isSearching, setIsSearching] = useState(false);
@@ -17,7 +17,7 @@ export default function Home() {
       <Navigator />
 
       <main className="flex min-h-screen flex-col items-center justify-start overflow-x-hidden bg-base-100 px-[4vw] font-sans font-medium">
-        <BattleCard />
+        <BattleSpan />
 
         <div className="w-full rounded-xl bg-base-200 p-2 py-6 md:p-8">
           <HeroSection />
