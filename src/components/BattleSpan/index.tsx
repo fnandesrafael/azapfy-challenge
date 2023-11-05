@@ -14,6 +14,8 @@ export default function BattleSpan() {
   useEffect(() => {
     if (selectedHeroes.length > 0) {
       setCanShow(true);
+    } else if (selectedHeroes.length === 0) {
+      setCanShow(false);
     }
   }, [selectedHeroes]);
 
