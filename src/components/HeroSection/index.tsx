@@ -22,12 +22,16 @@ export default function HeroSection() {
         </p>
 
         <div className="z-10 flex flex-col items-start gap-4 md:flex-row">
-          <button className="btn btn-primary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none">
+          <Link
+            className="btn btn-primary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none"
+            href="#play"
+            role="button"
+          >
             Jogar!
-          </button>
+          </Link>
           <Link
             className="btn btn-secondary w-32 rounded-full px-8 shadow-comic hover:shadow-comic lg:shadow-none"
-            href="http://homologacao3.azapfy.com.br/api/ps/metahumans"
+            href="https://github.com/fnandesrafael/azapfy-challenge"
             target="_blank"
             role="button"
           >
@@ -41,6 +45,7 @@ export default function HeroSection() {
           src={minihero}
           alt="Imagem de um menino em modelagem 3D correndo com uma capa de super herói."
           className="absolute -right-12 top-60 w-[300px] transition-transform duration-1000 ease-in-out md:top-44 md:w-[450px] lg:right-0 lg:top-24 lg:w-[600px]"
+          priority
         />
       </div>
     </section>

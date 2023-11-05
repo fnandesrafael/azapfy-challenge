@@ -1,27 +1,40 @@
 'use client';
 
-import axios from 'axios';
-import React from 'react';
-import useSWR from 'swr';
-import { HeroProps } from '@/store/heroesStore';
+import React, { useEffect } from 'react';
+import useHeroesStore from '@/store/heroesStore';
 import HeroCard from '../HeroCard';
 import Skeleton from '../HeroCard/Skeleton';
+import getHeroes from '@/api';
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+type CardDisplayProps = {
+  isSearching: boolean;
+};
 
-export default function CardDisplay() {
-  const { data } = useSWR<Array<HeroProps>>(
-    'http://homologacao3.azapfy.com.br/api/ps/metahumans',
-    fetcher,
-  );
+export default function CardDisplay({ isSearching }: CardDisplayProps) {
+  const { heroes, setHeroes, filteredHeroes } = useHeroesStore();
+
+  useEffect(() => {
+    async function fetchData() {
+      setHeroes(await getHeroes());
+    }
+
+    fetchData();
+  }, [setHeroes]);
 
   return (
     <div className="flex flex-col items-center gap-x-8 gap-y-12 py-12 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-      {data
-        ? data?.map((hero) => <HeroCard key={hero.id} data={hero} />)
-        : Array.from({ length: 12 }).map((_, index) => (
-            <Skeleton key={index} />
-          ))}
+      {(heroes.length === 0 || isSearching) &&
+        Array.from({ length: heroes.length || 100 }).map((_, index) => (
+          <Skeleton key={index} />
+        ))}
+
+      {filteredHeroes.length > 0 &&
+        !isSearching &&
+        filteredHeroes.map((hero) => <HeroCard key={hero.id} data={hero} />)}
+
+      {!isSearching &&
+        filteredHeroes.length === 0 &&
+        heroes.map((hero) => <HeroCard key={hero.id} data={hero} />)}
     </div>
   );
 }

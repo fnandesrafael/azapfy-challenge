@@ -18,6 +18,7 @@
 
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +32,12 @@ body {
   position: relative;
 }
 ::-webkit-scrollbar {
-  display: none;
+  background-color: hsl(var(--b2));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #16160a;
+  height: 6rem;
 }
 
 .input-group {
@@ -43,5 +49,5 @@ body {
 }
 
 .input-group > :last-child {
-  @apply rounded-full p-2
+  @apply rounded-full p-4
 }

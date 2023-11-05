@@ -13,7 +13,7 @@ export default function Navigator() {
       >
         <Link
           className="btn btn-ghost btn-md rounded-full px-8 normal-case hover:shadow-comic"
-          href="/"
+          href="#play"
         >
           Jogar
         </Link>
