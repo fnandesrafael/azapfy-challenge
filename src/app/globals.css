@@ -44,5 +44,5 @@ body {
 }
 
 .input-group > :last-child {
-  @apply rounded-full p-2
+  @apply rounded-full p-4
 }
