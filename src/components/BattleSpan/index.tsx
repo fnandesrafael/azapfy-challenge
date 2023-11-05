@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import starElement from '../../../public/images/star_element.png';
 import useHeroesStore from '@/store/heroesStore';
+import PreviewCard from '../PreviewCard';
 
 export default function BattleSpan() {
   const { selectedHeroes } = useHeroesStore();
@@ -28,13 +29,20 @@ export default function BattleSpan() {
         >
           <Image src={starElement} alt="Star element" className="w-[250px]" />
 
-          <div className="absolute z-40 flex h-full w-full flex-row items-center justify-center gap-2">
-            <span>{selectedHeroes[0]?.id}</span>
-            <span>{selectedHeroes[1]?.id}</span>
+          <div className="absolute z-40 flex h-full w-full flex-row items-center justify-start gap-6 pl-16">
+            {selectedHeroes.map((hero) => (
+              <PreviewCard data={hero} />
+            ))}
 
-            <button className="btn btn-primary absolute bottom-9 right-2 normal-case">
-              Batalhar!
-            </button>
+            {selectedHeroes.length === 2 && (
+              <motion.button
+                className="btn btn-primary fixed bottom-10 right-12 rounded-full normal-case hover:shadow-comic"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+              >
+                Batalhar!
+              </motion.button>
+            )}
           </div>
         </motion.div>
       )}
