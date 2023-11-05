@@ -1,19 +1,14 @@
 'use client';
 
 import React, { FormEvent, useRef } from 'react';
-import { BiSearch } from 'react-icons/bi';
-import Spinner from '@/components/Spinner';
 import useHeroesStore from '@/store/heroesStore';
+import sortObjectsByStringMatch from '@/utils/sortByTextMatch';
 
 type SearchBarProps = {
-  isSearching: boolean;
   setIsSearching: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function SearchBar({
-  isSearching,
-  setIsSearching,
-}: SearchBarProps) {
+export default function SearchBar({ setIsSearching }: SearchBarProps) {
   const { heroes, filterHeroes } = useHeroesStore();
   const inputValue = useRef<HTMLInputElement>(null);
   const debounce = useRef<NodeJS.Timeout | null>(null);
@@ -28,15 +23,11 @@ export default function SearchBar({
     setIsSearching(true);
 
     debounce.current = setTimeout(() => {
-      filterHeroes(
-        heroes?.filter((hero) =>
-          hero.name
-            .toLowerCase()
-            .includes(
-              (inputValue.current as HTMLInputElement).value.toLowerCase(),
-            ),
-        ),
+      const sortedArray = sortObjectsByStringMatch(
+        heroes,
+        inputValue.current?.value.toLowerCase() as string,
       );
+      filterHeroes(sortedArray);
       setIsSearching(false);
     }, 1000);
   };
@@ -51,16 +42,6 @@ export default function SearchBar({
         ref={inputValue}
         onChange={handleSearch}
       />
-      <button
-        className="btn btn-primary h-12 w-12 rounded-full shadow-comic md:shadow-none md:hover:shadow-comic"
-        onClick={handleSearch}
-      >
-        {isSearching ? (
-          <Spinner fontSize="text-2xl" textColor="text-black" />
-        ) : (
-          <BiSearch className="text-2xl" />
-        )}
-      </button>
     </form>
   );
 }

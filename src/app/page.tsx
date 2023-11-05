@@ -34,10 +34,7 @@ export default function Home() {
               className="absolute left-0 mb-96 hidden w-8 md:flex"
             />
 
-            <SearchBar
-              isSearching={isSearching}
-              setIsSearching={setIsSearching}
-            />
+            <SearchBar setIsSearching={setIsSearching} />
           </div>
 
           <CardDisplay isSearching={isSearching} />

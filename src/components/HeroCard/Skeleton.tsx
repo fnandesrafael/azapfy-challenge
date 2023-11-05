@@ -7,10 +7,8 @@ export default function Skeleton() {
     <motion.div
       className="text-contrast group relative flex h-80 w-64 animate-pulse flex-col items-center justify-center overflow-hidden border-[2px] border-[#16160a] bg-black hover:cursor-pointer hover:border-[2px] md:h-64 md:w-52"
       role="skeleton"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
     >
-      <Spinner fontSize="text-xl" textColor="text-white" />
+      <Spinner fontSize="text-2xl" textColor="text-white" />
     </motion.div>
   );
 }
