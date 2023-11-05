@@ -27,7 +27,7 @@ export default function PreviewCard({ data }: PreviewCardProps) {
         <AiOutlineClose className="text-xl text-[#16160a]" />
       </button>
       <Image
-        className="w-full"
+        className="h-auto w-auto"
         src={data.images.sm}
         alt={`Image of ${data.name}`}
         width={108}

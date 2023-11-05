@@ -19,10 +19,10 @@ export default function HeroCard({ data }: HeroCardProps) {
     >
       <Image
         className="w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
-        src={`${data.images.md}`}
+        src={`${data.images.lg}`}
         alt={`Image of ${data.name}`}
-        width={208}
-        height={240}
+        width={600}
+        height={600}
       />
 
       <div className="absolute -bottom-96 h-14 w-full bg-black p-4 transition-all duration-200 ease-in-out group-hover:bottom-0">

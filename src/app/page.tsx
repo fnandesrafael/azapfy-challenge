@@ -28,9 +28,13 @@ export default function Home() {
             <h1 className="z-10 mb-2 font-head text-3xl uppercase md:text-5xl">
               Heróis
             </h1>
-            <p className="z-10 mb-6 text-sm opacity-75 md:text-base">
-              Pesquise seu herói favorito digitando no campo abaixo.
-            </p>
+            <div className="z-10 mb-6 text-sm opacity-75 md:text-base">
+              <p>Pesquise seu herói favorito digitando no campo abaixo.</p>
+              <p>
+                Em seguida, selecione ele e outro adversário e clique no botão
+                "Batalhar!" no canto inferior direito da tela!
+              </p>
+            </div>
             <Image
               src={gridElement}
               alt=""
