@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Archivo_Black, Poppins } from 'next/font/google';
 import './globals.css';
-import Head from 'next/head';
 
 const archivoBlack = Archivo_Black({
   weight: '400',
@@ -31,12 +30,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="retro">
-      <Head>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-      </Head>
       <body
         className={`${poppins.variable} ${archivoBlack.variable} text-[#16160A]`}
       >

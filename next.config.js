@@ -7,7 +7,6 @@ const nextConfig = {
       }
     ]
   },
-  crossOrigin: 'use-credentials'
 }
 
 module.exports = nextConfig
