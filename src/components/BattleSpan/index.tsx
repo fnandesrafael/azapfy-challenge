@@ -1,27 +1,31 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { SetStateAction, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import starElement from '../../../public/images/star_element.png';
 import useHeroesStore from '@/store/heroesStore';
 import PreviewCard from '../PreviewCard';
 
-export default function BattleSpan() {
+type BattleSpanProps = {
+  setCanShowModal: React.Dispatch<SetStateAction<boolean>>;
+};
+
+export default function BattleSpan({ setCanShowModal }: BattleSpanProps) {
   const { selectedHeroes } = useHeroesStore();
-  const [canShow, setCanShow] = useState(false);
+  const [canShowBattleSpan, setCanShowBattleSpan] = useState(false);
 
   useEffect(() => {
     if (selectedHeroes.length > 0) {
-      setCanShow(true);
+      setCanShowBattleSpan(true);
     } else if (selectedHeroes.length === 0) {
-      setCanShow(false);
+      setCanShowBattleSpan(false);
     }
   }, [selectedHeroes]);
 
   return (
     <AnimatePresence mode="wait">
-      {canShow && (
+      {canShowBattleSpan && (
         <motion.div
           key="battle-card"
           className="fixed bottom-0 right-0 z-30 flex"
@@ -56,14 +60,15 @@ export default function BattleSpan() {
               ))}
             </AnimatePresence>
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               {selectedHeroes.length === 2 && (
                 <motion.button
-                  className="btn btn-primary fixed bottom-48 right-12 rounded-full normal-case text-[#16160a] hover:shadow-comic"
-                  initial={{ scale: 0 }}
+                  className="btn btn-primary fixed bottom-48 right-14 rounded-full normal-case text-[#16160a] hover:shadow-comic"
+                  initial={{ scale: 1000 }}
                   animate={{ scale: 1 }}
                   whileTap={{ scale: 0.9 }}
                   exit={{ scale: 0 }}
+                  onClick={() => setCanShowModal(true)}
                 >
                   Batalhar!
                 </motion.button>
