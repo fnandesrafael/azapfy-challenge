@@ -3,8 +3,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import Image from 'next/image';
 import useHeroesStore, { PowerStatsProps } from '@/store/heroesStore';
+import BattlerCard from '../BattlerCard';
 
 type ModalProps = {
   canShowModal: boolean;
@@ -30,22 +30,9 @@ export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
             >
               <AiOutlineClose />
             </button>
-            <div className="flex h-[30rem] items-center justify-between gap-8 border border-[#16160a] bg-base-100 p-12 shadow-comic">
+            <div className="flex h-[30rem] items-center justify-between gap-8 border-[2px] border-[#16160a] bg-base-100 p-12 shadow-comic">
               {/* Hero 1 */}
-              <div className="flex flex-col gap-6 text-start">
-                <div className="h-72 w-56 overflow-hidden border-[2px] border-[#16160a] shadow-comic">
-                  <Image
-                    src={selectedHeroes[0].images.lg}
-                    alt={`Image of ${selectedHeroes[0].name}`}
-                    width={600}
-                    height={600}
-                  />
-                </div>
-
-                <h1 className="w-56 justify-end font-head text-xl">
-                  {selectedHeroes[0].name}
-                </h1>
-              </div>
+              <BattlerCard align="start" hero={selectedHeroes[0]} />
 
               <div>
                 {Object.keys(selectedHeroes[0].powerstats).map(
@@ -71,21 +58,7 @@ export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
                 )}
               </div>
 
-              {/* Hero 2 */}
-              <div className="flex flex-col gap-6 text-end">
-                <div className="h-72 w-56 overflow-hidden border-[2px] border-[#16160a] shadow-comic">
-                  <Image
-                    src={selectedHeroes[1].images.lg}
-                    alt={`Image of ${selectedHeroes[1].name}`}
-                    width={600}
-                    height={600}
-                  />
-                </div>
-
-                <h1 className="w-56 justify-end font-head text-xl">
-                  {selectedHeroes[1].name}
-                </h1>
-              </div>
+              <BattlerCard align="end" hero={selectedHeroes[1]} />
             </div>
           </motion.div>
 
