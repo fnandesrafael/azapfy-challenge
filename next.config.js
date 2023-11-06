@@ -6,7 +6,8 @@ const nextConfig = {
         hostname: 'cdn.jsdelivr.net',
       }
     ]
-  }
+  },
+  crossOrigin: 'use-credentials'
 }
 
 module.exports = nextConfig
