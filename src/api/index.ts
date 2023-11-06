@@ -3,7 +3,7 @@ import { HeroProps } from '@/store/heroesStore';
 
 const getHeroes = async (): Promise<Array<HeroProps>> => {
   const response = await axios.get(
-    '//homologacao3.azapfy.com.br/api/ps/metahumans',
+    'http://homologacao3.azapfy.com.br/api/ps/metahumans',
   );
   return response.data;
 };
