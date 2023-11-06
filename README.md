@@ -27,13 +27,6 @@ Além disso, alguns outros requisitos foram pedidos, e naturalmente atendidos:
 - [Sumário](#sumário)
 - [Como Executar](#como-executar)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Principais Features](#principais-features)
-  - [1. Componente de Dropzone](#1-componente-de-dropzone)
-  - [2. State Management com Zustand](#2-state-management-com-zustand)
-  - [3. Compressão de Imagens e Conversão para Base64](#3-compressão-de-imagens-e-conversão-para-base64)
-  - [4. Context Menu Customizado](#4-context-menu-customizado)
-  - [5. Persistência de Dados em LocalStorage](#5-persistência-de-dados-em-localstorage)
-- [Instalação e Execução em Ambiente de Desenvolvimento](#instalação-e-execução-em-ambiente-de-desenvolvimento)
 - [Arquitetura do Software](#arquitetura-do-software)
 - [Créditos e Direitos Autorais](#créditos-e-direitos-autorais)
 
