@@ -28,6 +28,15 @@ export type HeroProps = {
   };
 };
 
+export type PowerStatsProps = {
+  intelligence: number;
+  strength: number;
+  speed: number;
+  durability: number;
+  power: number;
+  combat: number;
+};
+
 type HeroesStoreProps = {
   heroes: Array<HeroProps>;
   filteredHeroes: Array<HeroProps>;

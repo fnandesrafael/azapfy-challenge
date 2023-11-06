@@ -63,7 +63,7 @@ export default function BattleSpan({ setCanShowModal }: BattleSpanProps) {
             <AnimatePresence>
               {selectedHeroes.length === 2 && (
                 <motion.button
-                  className="btn btn-primary fixed bottom-48 right-14 rounded-full normal-case text-[#16160a] hover:shadow-comic"
+                  className="btn btn-primary fixed bottom-48 right-14 rounded-full normal-case text-[#16160a] shadow-comic hover:shadow-comic md:shadow-none"
                   initial={{ scale: 1000 }}
                   animate={{ scale: 1 }}
                   whileTap={{ scale: 0.9 }}
