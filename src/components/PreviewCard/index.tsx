@@ -14,7 +14,7 @@ export default function PreviewCard({ data }: PreviewCardProps) {
   return (
     <motion.div
       key={data.id}
-      className="group flex w-[4.5rem] flex-col items-center justify-center rounded-sm border-[2px] border-[#16160a] bg-base-100 shadow-comic"
+      className="group flex h-24 w-[4.5rem] flex-col items-center justify-center overflow-hidden rounded-sm border-[2px] border-[#16160a] bg-base-100 shadow-comic"
       initial={{ scale: 0 }}
       animate={{ scale: 1, transition: { delay: 0.2 } }}
       exit={{ scale: 0 }}
