@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import useHeroesStore, { PowerStatsProps } from '@/store/heroesStore';
-import BattlerCard from '../BattlerCard';
+import Competitor from '../CompetitorCard';
 
 type ModalProps = {
   canShowModal: boolean;
@@ -31,8 +31,7 @@ export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
               <AiOutlineClose />
             </button>
             <div className="flex h-[30rem] items-center justify-between gap-8 border-[2px] border-[#16160a] bg-base-100 p-12 shadow-comic">
-              {/* Hero 1 */}
-              <BattlerCard align="start" hero={selectedHeroes[0]} />
+              <Competitor align="start" hero={selectedHeroes[0]} isWinner />
 
               <div>
                 {Object.keys(selectedHeroes[0].powerstats).map(
@@ -58,7 +57,7 @@ export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
                 )}
               </div>
 
-              <BattlerCard align="end" hero={selectedHeroes[1]} />
+              <Competitor align="end" hero={selectedHeroes[1]} />
             </div>
           </motion.div>
 
