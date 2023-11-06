@@ -14,6 +14,23 @@ type ModalProps = {
 export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
   const { selectedHeroes } = useHeroesStore();
 
+  const handleWinner = () => {
+    const calculateTotalPower = (stats: PowerStatsProps) => {
+      return Object.values(stats).reduce((acc, cur) => acc + cur, 0);
+    };
+
+    const heroOne = calculateTotalPower(selectedHeroes[0].powerstats);
+    const heroTwo = calculateTotalPower(selectedHeroes[1].powerstats);
+
+    if (heroOne > heroTwo) {
+      return selectedHeroes[0].id;
+    }
+    if (heroOne === heroTwo) {
+      return 'tie';
+    }
+    return selectedHeroes[1].id;
+  };
+
   return (
     <AnimatePresence mode="wait">
       {canShowModal && (
@@ -31,7 +48,11 @@ export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
               <AiOutlineClose />
             </button>
             <div className="flex h-[30rem] items-center justify-between gap-8 border-[2px] border-[#16160a] bg-base-100 p-12 shadow-comic">
-              <Competitor align="start" hero={selectedHeroes[0]} isWinner />
+              <Competitor
+                align="start"
+                hero={selectedHeroes[0]}
+                isWinner={handleWinner()}
+              />
 
               <div>
                 {Object.keys(selectedHeroes[0].powerstats).map(
@@ -57,7 +78,11 @@ export default function Modal({ canShowModal, setCanShowModal }: ModalProps) {
                 )}
               </div>
 
-              <Competitor align="end" hero={selectedHeroes[1]} />
+              <Competitor
+                align="end"
+                hero={selectedHeroes[1]}
+                isWinner={handleWinner()}
+              />
             </div>
           </motion.div>
 

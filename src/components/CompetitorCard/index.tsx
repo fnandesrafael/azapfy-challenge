@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { AnimatePresence } from 'framer-motion';
 import { HeroProps } from '@/store/heroesStore';
 import winnerElement from '../../../public/images/winner_element.png';
+import tieElement from '../../../public/images/tie_element.png';
 
 type BattlerCardProps = {
   hero: HeroProps;
   align: string;
-  isWinner?: boolean;
+  isWinner: number | 'tie';
 };
 
 export default function CompetitorCard({
@@ -18,17 +18,25 @@ export default function CompetitorCard({
   return (
     <>
       <div className={`relative flex flex-col gap-6 pt-8 ${`text-${align}`}`}>
-        <AnimatePresence mode="wait">
-          {isWinner && (
-            <Image
-              className="absolute -right-20 -top-12"
-              src={winnerElement}
-              alt="Image element showing who's the winner."
-              width={300}
-              height={300}
-            />
-          )}
-        </AnimatePresence>
+        {isWinner === hero.id && (
+          <Image
+            className="absolute -right-28 -top-16"
+            src={winnerElement}
+            alt="Image element showing who's the winner."
+            width={300}
+            height={300}
+          />
+        )}
+
+        {isWinner === 'tie' && (
+          <Image
+            className="absolute -right-28 -top-16"
+            src={tieElement}
+            alt="Image element showing who's the winner."
+            width={300}
+            height={300}
+          />
+        )}
 
         <div className="h-72 w-56 overflow-hidden border-[2px] border-[#16160a] shadow-comic">
           <Image
